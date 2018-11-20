@@ -46,4 +46,16 @@ public class ZhangWuDao {
             throw new RuntimeException("添加失败");
         }
     }
+    //删除
+    public boolean deleteZhangWu(int id){
+        String sql = "delete from gjp_zhangwu where zwid = ?";
+        Object [] param = {id};
+        try {
+            qr.update(sql,param);
+            return true;
+        }catch (SQLException e){
+            System.out.println(e);
+        }
+        return false;
+    }
 }

@@ -22,5 +22,7 @@ public class ZhangWuService {
     public void addZhangWu(ZhangWu zw){
         dao.addZhangWu(zw);
     }
-
+    public boolean deleteZhangWu(int id){
+       return dao.deleteZhangWu(id);
+    }
 }

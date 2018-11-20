@@ -23,5 +23,7 @@ public class ZhangWuController {
     public void addZhangWu(ZhangWu zw){
         service.addZhangWu(zw);
     }
-
+    public boolean deleteZhangWu(int id){
+        return service.deleteZhangWu(id);
+    }
 }

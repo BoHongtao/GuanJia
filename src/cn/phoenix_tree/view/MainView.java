@@ -57,8 +57,19 @@ public class MainView {
         controller.addZhangWu(zw);
 
     }
+    /*
+     * 删除账务
+     */
     private void deleteZhangWu(){
-
+        view.selectAll();
+        System.out.println("请输入要删除的id");
+        Scanner sc = new Scanner(System.in);
+        int zw_id = sc.nextInt();
+        if(controller.deleteZhangWu(zw_id)){
+            System.out.println("删除成功");
+        }else{
+            System.out.println("删除失败");
+        }
     }
     private void editZhangWu(){
 
